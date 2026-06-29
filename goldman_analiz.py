@@ -4,7 +4,8 @@ import time
 import warnings
 warnings.filterwarnings("ignore")
 
-key = open('.env').read().split('=')[1].strip()
+import os
+key = os.environ.get("ANTHROPIC_API_KEY")
 client = anthropic.Anthropic(api_key=key)
 
 def goldman_analiz(hisse, metrikler):
