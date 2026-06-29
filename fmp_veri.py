@@ -3,7 +3,8 @@ import pandas as pd
 import warnings
 warnings.filterwarnings("ignore")
 
-API_KEY = "NZRq9Sm9k4udODzLEb2YoGsxO5BvdVLV"
+import os
+API_KEY = os.environ.get("FMP_API_KEY")
 BASE = "https://financialmodelingprep.com/stable"
 
 def fmp_metrikleri_hesapla(sembol):
